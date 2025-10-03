@@ -18,7 +18,8 @@ text_ = """
 md = MarkdownIt()
 
 excluded_prefixes = [
-    r'.\.'
+    r'.\.',
+    r'./.',
 ]
 
 
