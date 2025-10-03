@@ -3,7 +3,7 @@
 
 ## test_dir
 
-[lol](test_dir\test1.md)
+[lol](test_dir/test1.md)
 
-[kekes](test_dir\test3.md)
+[kekes](test_dir/test3.md)
 
