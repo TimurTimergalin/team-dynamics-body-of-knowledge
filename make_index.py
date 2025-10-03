@@ -197,4 +197,5 @@ def main(argv):
 
 
 if __name__ == '__main__':
+    assert False
     main(sys.argv)
