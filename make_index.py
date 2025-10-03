@@ -178,8 +178,8 @@ def validate_files(files):
 
 
 def main(argv):
-    if len(argv) != 2:
-        raise RuntimeError("Invalid args")
+    if len(argv) < 2:
+        raise RuntimeError(f"Invalid args: {argv}")
 
     action = argv[1]
 
@@ -197,5 +197,4 @@ def main(argv):
 
 
 if __name__ == '__main__':
-    assert False
     main(sys.argv)

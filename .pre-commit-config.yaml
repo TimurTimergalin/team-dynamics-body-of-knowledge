@@ -3,5 +3,5 @@ repos:
     hooks:
       - id: generate-index
         name: Validate files and generate index
-        entry: .venv\\Scripts\\activate.bat && make_index.py generate
-        language: script
+        entry: .venv/Scripts/python.exe make_index.py generate
+        language: python
