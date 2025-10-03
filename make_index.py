@@ -162,16 +162,15 @@ def create_files(files):
 
 
 def validate_files(files):
-    error = RuntimeError("You seem to have forgotten to remake the index")
     for file in files:
         f = None
         try:
             f = open(file.path, encoding='utf-8')
         except IOError:
-            raise error
+            raise RuntimeError(f"Cannot find {file.path}. You seem to have forgotten to remake the index")
         else:
             if f.read() != file.content:
-                raise error
+                raise RuntimeError(f"{file.path} has invalid content. You seem to have forgotten to remake the index")
         finally:
             if f:
                 f.close()
