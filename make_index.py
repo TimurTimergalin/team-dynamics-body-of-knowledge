@@ -51,7 +51,10 @@ class Link:
         )
 
     def render(self):
-        return f"[{self.title}]({os.path.join(*self.dirs, self.name)})"
+        href = os.path.join(*self.dirs, self.name)
+        if ' ' in href:
+            raise RuntimeError(f'Links to files should not contain spaces, but link \'{href}\' does')
+        return f"[{self.title}]({href})"
 
 
 @dataclass
@@ -69,7 +72,7 @@ def perform_walk(walk_gen):
 
     for file in files:
         file_full_path = os.path.join(full_path, file)
-        with open(file_full_path) as f:
+        with open(file_full_path, encoding='utf-8') as f:
             content = f.read()
         links.append(Link(
             title=get_title(content, file_full_path),
