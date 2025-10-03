@@ -1,12 +1,13 @@
 from __future__ import annotations
 
-from markdown_it import MarkdownIt
-from markdown_it.token import Token
-from dataclasses import dataclass, field
-
-from io import StringIO
+import difflib
 import os
 import sys
+from dataclasses import dataclass, field
+from io import StringIO
+
+from markdown_it import MarkdownIt
+from markdown_it.token import Token
 
 text_ = """
 # Title 1 `with code`
@@ -170,8 +171,12 @@ def validate_files(files):
         except IOError:
             raise RuntimeError(f"Cannot find {file.path}. You seem to have forgotten to remake the index")
         else:
+            real_content = f.read()
             if f.read() != file.content:
-                raise RuntimeError(f"{file.path} has invalid content. You seem to have forgotten to remake the index")
+                diff = '\n'.join(difflib.unified_diff(real_content, file.content))
+                raise RuntimeError(
+                    f"{file.path} has invalid content. You seem to have forgotten to remake the index\ndiff:\n{diff}"
+                )
         finally:
             if f:
                 f.close()
