@@ -71,6 +71,7 @@ def perform_walk(walk_gen):
 
     files = (x for x in files if x.endswith('.md'))
     files = (x for x in files if x.lower() != 'readme.md')
+    files = sorted(files)
     links = []
 
     for file in files:
