@@ -5,5 +5,5 @@
 
 ## Project-0
 
-[Project 0 - Введение](Project-0\what_is_that.md)
+[Project 0 - Введение](Project-0/what_is_that.md)
 

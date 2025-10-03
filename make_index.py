@@ -51,7 +51,7 @@ class Link:
         )
 
     def render(self):
-        href = os.path.join(*self.dirs, self.name)
+        href = '/'.join([*self.dirs, self.name])
         if ' ' in href:
             raise RuntimeError(f'Links to files should not contain spaces, but link \'{href}\' does')
         return f"[{self.title}]({href})"
