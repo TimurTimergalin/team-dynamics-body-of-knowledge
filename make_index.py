@@ -172,7 +172,7 @@ def validate_files(files):
             raise RuntimeError(f"Cannot find {file.path}. You seem to have forgotten to remake the index")
         else:
             real_content = f.read()
-            if f.read() != file.content:
+            if real_content != file.content:
                 diff = ' '.join(difflib.unified_diff(real_content.split('\n'), file.content.split('\n')))
                 raise RuntimeError(
                     f"{file.path} has invalid content. You seem to have forgotten to remake the index\ndiff:\n{diff}"
