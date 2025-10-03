@@ -4,8 +4,8 @@ from markdown_it import MarkdownIt
 from markdown_it.token import Token
 from dataclasses import dataclass, field
 
-import os
 from io import StringIO
+import os
 import sys
 
 text_ = """
