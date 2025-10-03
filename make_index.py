@@ -178,21 +178,20 @@ def validate_files(files):
 
 
 def main(argv):
-    if len(argv) != 1:
-        print("Invalid args", file=sys.stderr)
-        return
+    if len(argv) != 2:
+        raise RuntimeError("Invalid args")
 
     action = argv[1]
 
     supported = ['generate', 'validate']
     if action.lower() not in supported:
-        print(f"Invalid action '{action}', the only supported are {', '.join(supported)}", file=sys.stderr)
-        return
+        raise RuntimeError(f"Invalid action '{action}', the only supported are {', '.join(supported)}")
 
     match action:
         case 'generate':
             create_files(get_files())
-            os.system('git add ./*/README.md')
+            os.system('git add */README.md')
+            os.system('git add README.md')
         case 'validate':
             validate_files(get_files())
 
