@@ -1,0 +1,7 @@
+repos:
+  - repo: local
+    hooks:
+      - id: generate-index
+        name: Validate files and generate index
+        entry: .venv\\Scripts\\activate.bat && make_index.py generate
+        language: script

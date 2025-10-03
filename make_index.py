@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 
 import os
 from io import StringIO
+import sys
 
 text_ = """
 # Title 1 `with code`
@@ -176,5 +177,25 @@ def validate_files(files):
                 f.close()
 
 
+def main(argv):
+    if len(argv) != 1:
+        print("Invalid args", file=sys.stderr)
+        return
+
+    action = argv[1]
+
+    supported = ['generate', 'validate']
+    if action.lower() not in supported:
+        print(f"Invalid action '{action}', the only supported are {', '.join(supported)}", file=sys.stderr)
+        return
+
+    match action:
+        case 'generate':
+            create_files(get_files())
+            os.system('git add ./*/README.md')
+        case 'validate':
+            validate_files(get_files())
+
+
 if __name__ == '__main__':
-    create_files(get_files())
+    main(sys.argv)
