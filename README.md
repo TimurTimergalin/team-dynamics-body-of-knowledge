@@ -1,5 +1,7 @@
 # Содержание
-[Правила заполнения документации](rules.md)
+[Как решать конфликты в git](how_to_solve_conflicts.md)
+
+[Как редактировать этот репозиторий](rules.md)
 
 [Team Dynamics Body of Knowledge - Введение](what_is_that.md)
 
