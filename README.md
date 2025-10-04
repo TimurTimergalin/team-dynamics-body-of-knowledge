@@ -9,5 +9,7 @@
 
 ## Project-0
 
+[Как редактировать проект](Project-0/how_to_edit_the_project.md)
+
 [Project 0 - Введение](Project-0/what_is_that.md)
 
