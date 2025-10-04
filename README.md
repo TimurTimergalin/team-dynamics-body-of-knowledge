@@ -5,6 +5,8 @@
 
 [Как редактировать этот репозиторий](rules.md)
 
+[Полезные ссылки](useful_links.md)
+
 [Team Dynamics Body of Knowledge - Введение](what_is_that.md)
 
 ## Project-0
