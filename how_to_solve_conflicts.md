@@ -4,7 +4,7 @@
 ```shell
 git checkout master
 git pull
-git checkout @{-1}
+git checkout -
 git rebase master
 # ...
 # Решаем конфликты, а потом
