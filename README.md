@@ -1,4 +1,6 @@
 # Содержание
+[Особенности работы с Godot](godot_quirks.md)
+
 [Как решать конфликты в git](how_to_solve_conflicts.md)
 
 [Как редактировать этот репозиторий](rules.md)
