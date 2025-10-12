@@ -19,5 +19,5 @@
 
 [Project1 - Concept document](Project-1/Concept.md)
 
-[Системы Project1](Project-1/Systems.md)
+[Project1 - Systems](Project-1/Systems.md)
 
