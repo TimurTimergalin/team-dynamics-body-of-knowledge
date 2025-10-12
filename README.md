@@ -17,5 +17,7 @@
 
 ## Project-1
 
-[Project1 - Concept document](Project-1/GDD.md)
+[Project1 - Concept document](Project-1/Concept.md)
+
+[Системы Project1](Project-1/Systems.md)
 
