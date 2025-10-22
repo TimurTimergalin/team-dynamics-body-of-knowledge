@@ -19,6 +19,8 @@
 
 [Project1 - Concept document](Project-1/Concept.md)
 
+[Project1 - Goals and Tasks](Project-1/GoalsAndTasks.md)
+
 [Project1 - Systems](Project-1/Systems.md)
 
 [Project1 - Unreal Guides](Project-1/Unreal_Guides.md)
