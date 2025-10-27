@@ -19,6 +19,8 @@
 
 [Project1 - Concept document](Project-1/Concept.md)
 
+[Что планируется реализовать](Project-1/Features.md)
+
 [Project1 - Goals and Tasks](Project-1/GoalsAndTasks.md)
 
 [Project1 - Systems](Project-1/Systems.md)
