@@ -9,3 +9,5 @@
 
 [Project1 - Unreal Guides](Unreal_Guides.md)
 
+[Список требований к игре](feature_requirements.md)
+

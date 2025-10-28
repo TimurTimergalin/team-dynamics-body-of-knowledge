@@ -27,3 +27,5 @@
 
 [Project1 - Unreal Guides](Project-1/Unreal_Guides.md)
 
+[Список требований к игре](Project-1/feature_requirements.md)
+
